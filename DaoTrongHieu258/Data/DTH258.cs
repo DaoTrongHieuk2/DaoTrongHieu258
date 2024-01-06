@@ -15,5 +15,6 @@ namespace MVC.Data
         }
 
         public DbSet<DaoTrongHieu258.Models.SinhVien> SinhVien { get; set; } = default!;
+        public DbSet<DaoTrongHieu258.Models.LopHoc> LopHoc { get; set; } = default!;
     }
 }
