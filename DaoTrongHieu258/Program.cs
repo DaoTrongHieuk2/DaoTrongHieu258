@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using MVC.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<DTH258>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DTH258") ?? throw new InvalidOperationException("Connection string 'DTH258' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
