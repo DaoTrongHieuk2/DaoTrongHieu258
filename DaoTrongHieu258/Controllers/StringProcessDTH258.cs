@@ -7,7 +7,7 @@ public class StringProcessDTH258 : Controller
     public ActionResult ToLowerToUpper(string input)
     {
         string result = input.ToLower().ToUpper();
-        return Content(result);
+        return View(result);
     }
 }
 
